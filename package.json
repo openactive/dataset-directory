@@ -1,0 +1,15 @@
+{
+  "name": "dataset-directory",
+  "version": "1.0.0",
+  "description": "API for list of canonical datasets, traversing DCAT files",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Open Data Institute",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "express": "^4.17.3"
+  }
+}
