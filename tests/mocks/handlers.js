@@ -37,4 +37,13 @@ export const handlers = [
                 }),
             )
         }),
+    rest.get('https://slowcoach.com',
+        (req, res, ctx) => {
+            return res(
+                ctx.json({
+                    foo: 'bar5',
+                }),
+                ctx.delay(4000)
+            )
+        }),
 ]

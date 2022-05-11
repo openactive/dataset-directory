@@ -9,7 +9,9 @@
   "author": "Open Data Institute",
   "license": "MIT",
   "dependencies": {
+    "@jest/globals": "^28.1.0",
     "axios": "^0.26.1",
+    "dotenv": "^16.0.1",
     "express": "^4.17.3"
   },
   "devDependencies": {
@@ -19,6 +21,7 @@
   "type": "module",
   "jest": {
     "testEnvironment": "jest-environment-node",
-    "transform": {}
+    "transform": {},
+    "setupFiles": ["<rootDir>/tests/setEnvVars.js"]
   }
 }

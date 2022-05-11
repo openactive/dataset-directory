@@ -1,0 +1,1 @@
+process.env.REMOTE_API_RESPONSE_TIMEOUT= 2000;
