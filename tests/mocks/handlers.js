@@ -6,7 +6,7 @@ export const handlers = [
             return res(
                 ctx.status(200),
                 ctx.json({
-                    foo: 'bar1',
+                    dataset: 'bar1',
                 }),
             )
         }),
@@ -15,7 +15,7 @@ export const handlers = [
             return res(
                 ctx.status(200),
                 ctx.json({
-                    foo: 'bar2',
+                    dataset: 'bar2',
                 }),
             )
         }),
@@ -24,7 +24,7 @@ export const handlers = [
             return res(
                 ctx.status(200),
                 ctx.json({
-                    foo: 'bar3',
+                    dataset: 'bar3',
                 }),
             )
         }),
@@ -33,7 +33,7 @@ export const handlers = [
             return res(
                 ctx.status(200),
                 ctx.json({
-                    foo: 'bar4',
+                    dataset: 'bar4',
                 }),
             )
         }),
@@ -41,7 +41,7 @@ export const handlers = [
         (req, res, ctx) => {
             return res(
                 ctx.json({
-                    foo: 'bar5',
+                    dataset: 'bar5',
                 }),
                 ctx.delay(4000)
             )

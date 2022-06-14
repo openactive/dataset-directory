@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+<!--
+  Design: Identity by HTML5 UP
+  html5up.net | @ajlkn
+  Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
+  DCAT Template: Nick Evans / imin
+  imin.co | @nickevans / @_imin_
+  For openactive.io
+    Free for personal and commercial use under the CC-BY v4.0 license (https://creativecommons.org/licenses/by/4.0/)
+-->
+<html prefix="dct: http://purl.org/dc/terms/
+              rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+              dcat: http://www.w3.org/ns/dcat#
+              foaf: http://xmlns.com/foaf/0.1/"
+      lang="en">
+<head>
+    <title>activeNewham Sessions and Facilities - Open Data</title>
+
+    <meta name="title" content="unnamespaced title" />
+    <meta name="identifier" content="https://api.activenewham.org.uk/OpenActive/" />
+    <meta name="Keywords" content="List, Of, Keywords, From, Content, Property" />
+    <meta name="Description" content="unnamespaced description from content property" />
+    <meta name="language" content="English" />
+
+    <meta property="og:title" content="OG title" />
+    <meta property="og:description" content="OG description from content property" />
+    <meta property="og:locale" content="en_GB" />
+    <meta property="og:url" content="https://api.activenewham.org.uk/OpenActive/" />
+    <meta property="og:image" content="https://res.cloudinary.com/gladstone/image/upload/ActiveNewham-live/xrflwvvlidyd3b3w9l3g" />
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="Scripts/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="Content/main.css" />
+    <!--[if lte IE 9]><link rel="stylesheet" href="Content/ie9.css" /><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="Content/ie8.css" /><![endif]-->
+    <noscript><link rel="stylesheet" href="Content/noscript.css" /></noscript>
+    <style>
+        body {
+            /*background-image: url("https://res.cloudinary.com/gladstone/image/upload/ActiveNewham-live-live/p1vozxljro8cbuc0gnmi");*/
+            background-image: url("Content/images/overlay.png"), -moz-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("https://res.cloudinary.com/gladstone/image/upload/ActiveNewham-live-live/p1vozxljro8cbuc0gnmi");
+            background-image: url("Content/images/overlay.png"), -webkit-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("https://res.cloudinary.com/gladstone/image/upload/ActiveNewham-live-live/p1vozxljro8cbuc0gnmi");
+            background-image: url("Content/images/overlay.png"), -ms-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("https://res.cloudinary.com/gladstone/image/upload/ActiveNewham-live-live/p1vozxljro8cbuc0gnmi");
+            background-image: url("Content/images/overlay.png"), linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("https://res.cloudinary.com/gladstone/image/upload/ActiveNewham-live-live/p1vozxljro8cbuc0gnmi");
+        }
+    </style>
+
+    <!-- JSON-LD conforming to Google Structured Data specification. -->
+    <script type="application/ld+json">
+        {
+            "url": "https://api.activenewham.org.uk/OpenActive/",
+            "name": "activeNewham Sessions and Facilities",
+            "description": "Near real-time availability and rich descriptions relating to the sessions and facilities available from activeNewham, published using the OpenActive Modelling Specification 2.0, and covering a rolling lookhead window of the next 14 days.",
+            "keywords": [
+                "Sessions",
+                "Facilities",
+                "Activities",
+                "Sports",
+                "Physical Activity",
+                "OpenActive"
+            ],
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "distribution": [
+                {
+                    "name": "SessionSeries",
+                    "additionalType": "https://openactive.io/SessionSeries",
+                    "encodingFormat": "application/vnd.openactive.rpde+json; version=1",
+                    "contentUrl": "https://opendata.leisurecloud.live/api/feeds/ActiveNewham-live-live-session-series",
+                    "@context": "http://schema.org",
+                    "@type": "DataDownload"
+                },
+                {
+                    "name": "ScheduledSession",
+                    "additionalType": "https://openactive.io/ScheduledSession",
+                    "encodingFormat": "application/vnd.openactive.rpde+json; version=1",
+                    "contentUrl": "https://opendata.leisurecloud.live/api/feeds/ActiveNewham-live-live-scheduled-sessions",
+                    "@context": "http://schema.org",
+                    "@type": "DataDownload"
+                },
+                {
+                    "name": "FacilityUse",
+                    "additionalType": "https://openactive.io/FacilityUse",
+                    "encodingFormat": "application/vnd.openactive.rpde+json; version=1",
+                    "contentUrl": "https://opendata.leisurecloud.live/api/feeds/ActiveNewham-live-live-facility-uses",
+                    "@context": "http://schema.org",
+                    "@type": "DataDownload"
+                },
+                {
+                    "name": "Slot",
+                    "additionalType": "https://openactive.io/Slot",
+                    "encodingFormat": "application/vnd.openactive.rpde+json; version=1",
+                    "contentUrl": "https://opendata.leisurecloud.live/api/feeds/ActiveNewham-live-live-slots",
+                    "@context": "http://schema.org",
+                    "@type": "DataDownload"
+                }
+            ],
+            "discussionUrl": "https://github.com/gladstonemrm/activeNewham/issues",
+            "documentation": "https://docs.leisurecloud.live/",
+            "inLanguage": "en-GB",
+            "publisher": {
+                "@context": "http://schema.org",
+                "@type": "Organization",
+                "name": "activeNewham",
+                "description": "We are a Leisure Trust with charitable status working in partnership with Newham Council to deliver leisure, sports and volunteering opportunities in Newham. Since January 2013 our mission has been to support you to become more active in your local community. Whether it's to take part in your favourite sport, organise an event in your local neighbourhood park, or even just to achieve your fitness goals in one of our 4 leisure and fitness centres. We are here to help and support you.\n\nWhatever your age, interest or ability, we have an activity to suit you and your lifestyle.\n",
+                "email": "memberships@activenewham.org.uk",
+                "legalName": "activeNewham",
+                "logo": {
+                    "@context": "http://schema.org",
+                    "@type": "ImageObject",
+                    "url": "https://res.cloudinary.com/gladstone/image/upload/ActiveNewham-live/xrflwvvlidyd3b3w9l3g"
+                },
+                "telephone": "+44 3001240123",
+                "url": "http://www.activenewham.org.uk"
+            },
+            "datePublished": "2022-05-17T11:19:46.2310504+00:00",
+            "schemaVersion": "https://www.openactive.io/modelling-opportunity-data/2.0/",
+            "softwareVersion": "OWS:2.0.1",
+            "@context": "http://schema.org",
+            "@type": "Dataset",
+            "@id": "https://api.activenewham.org.uk/OpenActive/"
+        }
+    </script>
+</head>
+<body class="is-loading">
+
+<!-- Wrapper -->
+<div id="wrapper" typeof="dcat:Dataset" resource="https://api.activenewham.org.uk/OpenActive/">
+
+    <!-- Main -->
+    <section id="main">
+        <header>
+
+            <div>
+                <a href="http://www.activenewham.org.uk/" about="http://www.activenewham.org.uk/" property="foaf:homepage">
+                    <span class="avatar" property="foaf:name" content="activeNewham"><img class="logo" src="https://res.cloudinary.com/gladstone/image/upload/ActiveNewham-live/xrflwvvlidyd3b3w9l3g" alt="" /></span>
+                </a>
+            </div>
+
+            <h1>Open Data</h1>
+
+            <h2 property="dct:title">activeNewham Sessions and Facilities</h2>
+
+            <p class="description">Near real-time availability and rich descriptions of the sessions and facilities available from activeNewham, published using <a href='https://www.openactive.io/'>OpenActive</a> <a href='https://www.openactive.io/realtime-paged-data-exchange/1.0/'>RPDE 1.0</a> and <a href='https://www.openactive.io/modelling-opportunity-data/2.0/'>Model 2.0</a>.</p>
+
+            <p class="metadata" property="dct:created" content='17/05/2022 11:19:46 +00:00' datatype='xsd:dateTime'></p>
+            <p class="metadata" property="dct:description">Dct description from textContent</p>
+            <p class="metadata" property="dcat:keyword">Sessions</p>
+            <p class="metadata" property="dcat:keyword">Facilities</p>
+            <p class="metadata" property="dcat:keyword">Activities</p>
+            <p class="metadata" property="dcat:keyword">Sports</p>
+            <p class="metadata" property="dcat:keyword">Physical Activity</p>
+            <p class="metadata" property="dcat:keyword">OpenActive</p>
+            <a class="metadata" href="http://purl.org/linked-data/sdmx/2009/code#freq-N" property="dct:accrualPeriodicity">Every minute</a>
+            <ul class="icons">
+                <li><a href="https://docs.leisurecloud.live/" class="fa-info">Documentation</a><br /><span>Documentation</span></li>
+                <li><a href="https://github.com/gladstonemrm/activeNewham/issues" class="fa-comments">Discussion</a><br /><span>Discussion</span></li>
+            </ul>
+        </header>
+
+        <ul class="download">
+            <li>
+                <a property='dcat:distribution' typeof='dcat:Distribution' href='https://opendata.leisurecloud.live/api/feeds/ActiveNewham-live-live-session-series'>
+                    <i class="fa fa-cloud-download"></i>
+                    <span property="dct:title">SessionSeries</span>
+                    <span class="metadata" content='application/vnd.openactive.rpde+json; version=1' property='dcat:mediaType'>mediaType 1 from text content</span>
+                </a>
+            </li>
+            <li>
+                <a property='dcat:distribution' typeof='dcat:Distribution' href='https://opendata.leisurecloud.live/api/feeds/ActiveNewham-live-live-scheduled-sessions'>
+                    <i class="fa fa-cloud-download"></i>
+                    <span property="dct:title">ScheduledSession</span>
+                    <span class="metadata" content='application/vnd.openactive.rpde+json; version=1' property='dcat:mediaType'>mediaType 2 from text content</span>
+                </a>
+            </li>
+            <li>
+                <a property='dcat:distribution' typeof='dcat:Distribution' href='https://opendata.leisurecloud.live/api/feeds/ActiveNewham-live-live-facility-uses'>
+                    <i class="fa fa-cloud-download"></i>
+                    <span property="dct:title">FacilityUse</span>
+                    <span class="metadata" content='application/vnd.openactive.rpde+json; version=1' property='dcat:mediaType'>mediaType 4 from text content</span>
+                </a>
+            </li>
+            <li>
+                <a property='dcat:distribution' typeof='dcat:Distribution' href='https://opendata.leisurecloud.live/api/feeds/ActiveNewham-live-live-slots'>
+                    <i class="fa fa-cloud-download"></i>
+                    <span property="dct:title">Slot</span>
+                    <span class="metadata" content='application/vnd.openactive.rpde+json; version=1' property='dcat:mediaType'>mediaType 4 from text content</span>
+                </a>
+            </li>
+        </ul>
+
+        <footer>
+            <div class="license">
+                    <span property="dct:license" resource="https://creativecommons.org/licenses/by/4.0/">
+                        This data is owned by <a property="dct:publisher" href="http://www.activenewham.org.uk/">activeNewham</a> and is licensed under the
+                        <a href="https://creativecommons.org/licenses/by/4.0/"><span property="dct:title">Creative Commons Attribution Licence (CC-BY v4.0)</span></a>
+                        for anyone to access, use and share;
+                    </span>
+                <span property="dct:rights" resource="#rights" typeof="odrs:RightsStatement">
+                        <span class="metadata" property="rdfs:label">Rights Statement</span>
+                        <a class="metadata" href="https://creativecommons.org/licenses/by/4.0/" property="odrs:dataLicense">Creative Commons Attribution Licence (CC-BY v4.0)</a>
+                        <a class="metadata" href="https://creativecommons.org/licenses/by/4.0/" property="odrs:contentLicense">Creative Commons Attribution Licence (CC-BY v4.0)</a>
+                        using attribution
+                        "<a href="https://api.activenewham.org.uk/OpenActive/" property="odrs:attributionURL"><span property="odrs:attributionText">activeNewham</span></a>".
+                    </span>
+            </div>
+            <p></p>
+            <span class="avatar"><a href="https://www.openactive.io/"><img src="https://www.openactive.io/assets/openactive-logo-small.png" width="100" alt="OpenActive" /></a></span>
+        </footer>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <ul class="copyright">
+            <li>Platform: <a href="https://www.gladstonesoftware.co.uk">Gladstone OWS:2.0.1</a>. Design: <a href="http://html5up.net">HTML5 UP</a>.</li>
+        </ul>
+    </footer>
+
+</div>
+
+<!-- Scripts -->
+<!--[if lte IE 8]><script src="Scripts/respond.min.js"></script><![endif]-->
+
+<script>if ('addEventListener' in window) { window.addEventListener('load', function () { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); }); document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : ''); }</script>
+</body>
+</html>
