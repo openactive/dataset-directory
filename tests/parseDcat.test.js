@@ -4,7 +4,7 @@ import {test, expect} from "@jest/globals";
 
 test('Extracts dcat and other metadata fields from dataset site response', async () => {
     expect.assertions(1);
-    const response = filesystem.readFileSync('./tests/fixtures/DatasetSiteFixture.html', "utf8");
+    const response = filesystem.readFileSync('./tests/fixtures/DatasetSiteActiveNewhamFixture.html', "utf8");
     await expect(parse(response)).toEqual(
         expect.objectContaining(
             {

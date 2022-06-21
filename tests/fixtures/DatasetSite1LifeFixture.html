@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>
+
+        <!DOCTYPE HTML>
+        <!--
+          Design: Identity by HTML5 UP
+          html5up.net | @ajlkn
+          Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
+          DCAT Template: Nick Evans / imin
+          imin.co | @nickevans / @_imin_
+          For openactive.io
+            Free for personal and commercial use under the CC-BY v4.0 license (https://creativecommons.org/licenses/by/4.0/)
+        -->
+        <html prefix="dct: http://purl.org/dc/terms/
+              rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+              dcat: http://www.w3.org/ns/dcat#
+              foaf: http://xmlns.com/foaf/0.1/"
+              lang="en">
+        <head>
+            <title>1Life Sessions and Facilities - Open Data</title>
+
+            <meta name="title" content="1Life Sessions and Facilities  - Open Data" />
+            <meta name="identifier" content="https://booking.1life.co.uk/OpenActive/" />
+            <meta name="Keywords" content="Sessions, Facilities, Activities, Sports, Physical Activity, OpenActive" />
+            <meta name="Description" content="Near real-time availability and rich descriptions relating to the sessions and facilities available from 1Life, published using the OpenActive Modelling Specification 2.0, and covering a rolling lookhead window of the next 6 days." />
+            <meta name="language" content="English" />
+
+            <meta property="og:title" content="1Life Sessions and Facilities - Open Data" />
+            <meta property="og:description" content="Near real-time availability and rich descriptions relating to the sessions and facilities available from 1Life, published using the OpenActive Modelling Specification 2.0, and covering a rolling lookhead window of the next 6 days." />
+            <meta property="og:locale" content="en_GB" />
+            <meta property="og:url" content="https://booking.1life.co.uk/OpenActive/" />
+            <meta property="og:image" content="https://booking.1life.co.uk/OpenActive/Content/images/gladstone.png" />
+
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <!--[if lte IE 8]><script src="Scripts/html5shiv.js"></script><![endif]-->
+            <link rel="stylesheet" href="Content/main.css" />
+            <!--[if lte IE 9]><link rel="stylesheet" href="Content/ie9.css" /><![endif]-->
+            <!--[if lte IE 8]><link rel="stylesheet" href="Content/ie8.css" /><![endif]-->
+            <noscript><link rel="stylesheet" href="Content/noscript.css" /></noscript>
+            <style>
+                body {
+                    /*background-image: url("");*/
+                    background-image: url("Content/images/overlay.png"), -moz-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("");
+                    background-image: url("Content/images/overlay.png"), -webkit-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("");
+                    background-image: url("Content/images/overlay.png"), -ms-linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("");
+                    background-image: url("Content/images/overlay.png"), linear-gradient(60deg, rgba(255, 165, 150, 0.5) 5%, rgba(0, 228, 255, 0.35)), url("");
+                }
+            </style>
+
+            <!-- JSON-LD conforming to Google Structured Data specification. -->
+            <script type="application/ld+json">
+                {
+                    "url": "https://booking.1life.co.uk/OpenActive/",
+                    "name": "1Life Sessions and Facilities",
+                    "description": "Near real-time availability and rich descriptions relating to the sessions and facilities available from 1Life, published using the OpenActive Modelling Specification 2.0, and covering a rolling lookhead window of the next 6 days.",
+                    "keywords": [
+                        "Sessions",
+                        "Facilities",
+                        "Activities",
+                        "Sports",
+                        "Physical Activity",
+                        "OpenActive"
+                    ],
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "distribution": [
+                        {
+                            "name": "SessionSeries",
+                            "additionalType": "https://openactive.io/SessionSeries",
+                            "encodingFormat": "application/vnd.openactive.rpde+json; version=1",
+                            "contentUrl": "https://opendata.leisurecloud.live/api/feeds/1Life-live-session-series",
+                            "@context": "http://schema.org",
+                            "@type": "DataDownload"
+                        },
+                        {
+                            "name": "ScheduledSession",
+                            "additionalType": "https://openactive.io/ScheduledSession",
+                            "encodingFormat": "application/vnd.openactive.rpde+json; version=1",
+                            "contentUrl": "https://opendata.leisurecloud.live/api/feeds/1Life-live-scheduled-sessions",
+                            "@context": "http://schema.org",
+                            "@type": "DataDownload"
+                        },
+                        {
+                            "name": "FacilityUse",
+                            "additionalType": "https://openactive.io/FacilityUse",
+                            "encodingFormat": "application/vnd.openactive.rpde+json; version=1",
+                            "contentUrl": "https://opendata.leisurecloud.live/api/feeds/1Life-live-facility-uses",
+                            "@context": "http://schema.org",
+                            "@type": "DataDownload"
+                        },
+                        {
+                            "name": "Slot",
+                            "additionalType": "https://openactive.io/Slot",
+                            "encodingFormat": "application/vnd.openactive.rpde+json; version=1",
+                            "contentUrl": "https://opendata.leisurecloud.live/api/feeds/1Life-live-slots",
+                            "@context": "http://schema.org",
+                            "@type": "DataDownload"
+                        }
+                    ],
+                    "discussionUrl": "https://github.com/gladstonemrm/1Life/issues",
+                    "documentation": "https://docs.leisurecloud.live/",
+                    "inLanguage": "en-GB",
+                    "publisher": {
+                        "@context": "http://schema.org",
+                        "@type": "Organization",
+                        "name": "1Life",
+                        "description": "1Life is a forward thinking lifestyle and management solutions company that engages with people in local communities to enhance lives through health and wellbeing, physical activity, learning and the arts.\n\nOur misson is to encourage everyone to get the most out of life.\nOur vision is to engage with people and communities, to enhance lives through health and wellbeing, sport and activity, learning and the arts.\nOur values are vitality, inclusion, learning and wellness.\n",
+                        "legalName": "1Life Management Solutions Ltd ",
+                        "logo": {
+                            "@context": "http://schema.org",
+                            "@type": "ImageObject",
+                            "url": "https://booking.1life.co.uk/OpenActive/Content/images/gladstone.png"
+                        },
+                        "telephone": "01480 484250",
+                        "url": "https://www.1life.co.uk/"
+                    },
+                    "datePublished": "2022-06-16T12:56:18.2110515+00:00",
+                    "schemaVersion": "https://www.openactive.io/modelling-opportunity-data/2.0/",
+                    "softwareVersion": "OWS:2.0.1",
+                    "@context": "http://schema.org",
+                    "@type": "Dataset",
+                    "@id": "https://booking.1life.co.uk/OpenActive/"
+                }
+            </script>
+        </head>
+<body class="is-loading">
+
+<!-- Wrapper -->
+<div id="wrapper" typeof="dcat:Dataset" resource="https://booking.1life.co.uk/OpenActive/">
+
+    <!-- Main -->
+    <section id="main">
+        <header>
+
+            <div>
+                <a href="https://www.1life.co.uk/" about="https://www.1life.co.uk/" property="foaf:homepage">
+                    <span class="avatar" property="foaf:name" content="1Life"><img class="logo" src="https://booking.1life.co.uk/OpenActive/Content/images/gladstone.png" alt="" /></span>
+                </a>
+            </div>
+
+            <h1>Open Data</h1>
+
+            <h2 property="dct:title">1Life Sessions and Facilities</h2>
+
+            <p class="description">Near real-time availability and rich descriptions of the sessions and facilities available from 1Life, published using <a href='https://www.openactive.io/'>OpenActive</a> <a href='https://www.openactive.io/realtime-paged-data-exchange/1.0/'>RPDE 1.0</a> and <a href='https://www.openactive.io/modelling-opportunity-data/2.0/'>Model 2.0</a>.</p>
+
+            <p class="metadata" property="dct:created" content='16/06/2022 12:56:18 +00:00' datatype='xsd:dateTime'></p>
+            <p class="metadata" property="dct:description">Near real-time availability and rich descriptions relating to the sessions and facilities available from 1Life, published using the OpenActive Modelling Specification 2.0, and covering a rolling lookhead window of the next 6 days.</p>
+            <p class="metadata" property="dcat:keyword">Sessions</p>
+            <p class="metadata" property="dcat:keyword">Facilities</p>
+            <p class="metadata" property="dcat:keyword">Activities</p>
+            <p class="metadata" property="dcat:keyword">Sports</p>
+            <p class="metadata" property="dcat:keyword">Physical Activity</p>
+            <p class="metadata" property="dcat:keyword">OpenActive</p>
+            <a class="metadata" href="http://purl.org/linked-data/sdmx/2009/code#freq-N" property="dct:accrualPeriodicity">Every minute</a>
+            <ul class="icons">
+                <li><a href="https://docs.leisurecloud.live/" class="fa-info">Documentation</a><br /><span>Documentation</span></li>
+                <li><a href="https://github.com/gladstonemrm/1Life/issues" class="fa-comments">Discussion</a><br /><span>Discussion</span></li>
+            </ul>
+        </header>
+
+        <ul class="download">
+            <li>
+                <a property='dcat:distribution' typeof='dcat:Distribution' href='https://opendata.leisurecloud.live/api/feeds/1Life-live-session-series'>
+                    <i class="fa fa-cloud-download"></i>
+                    <span property="dct:title">SessionSeries</span>
+                    <span class="metadata" content='application/vnd.openactive.rpde+json; version=1' property='dcat:mediaType'>OpenActive RPDE v1.0 Endpoints conforming to Modelling Specification 2.0.</span>
+                </a>
+            </li>
+            <li>
+                <a property='dcat:distribution' typeof='dcat:Distribution' href='https://opendata.leisurecloud.live/api/feeds/1Life-live-scheduled-sessions'>
+                    <i class="fa fa-cloud-download"></i>
+                    <span property="dct:title">ScheduledSession</span>
+                    <span class="metadata" content='application/vnd.openactive.rpde+json; version=1' property='dcat:mediaType'>OpenActive RPDE v1.0 Endpoints conforming to Modelling Specification 2.0.</span>
+                </a>
+            </li>
+            <li>
+                <a property='dcat:distribution' typeof='dcat:Distribution' href='https://opendata.leisurecloud.live/api/feeds/1Life-live-facility-uses'>
+                    <i class="fa fa-cloud-download"></i>
+                    <span property="dct:title">FacilityUse</span>
+                    <span class="metadata" content='application/vnd.openactive.rpde+json; version=1' property='dcat:mediaType'>OpenActive RPDE v1.0 Endpoints conforming to Modelling Specification 2.0.</span>
+                </a>
+            </li>
+            <li>
+                <a property='dcat:distribution' typeof='dcat:Distribution' href='https://opendata.leisurecloud.live/api/feeds/1Life-live-slots'>
+                    <i class="fa fa-cloud-download"></i>
+                    <span property="dct:title">Slot</span>
+                    <span class="metadata" content='application/vnd.openactive.rpde+json; version=1' property='dcat:mediaType'>OpenActive RPDE v1.0 Endpoints conforming to Modelling Specification 2.0.</span>
+                </a>
+            </li>
+        </ul>
+
+        <footer>
+            <div class="license">
+                    <span property="dct:license" resource="https://creativecommons.org/licenses/by/4.0/">
+                        This data is owned by <a property="dct:publisher" href="https://www.1life.co.uk/">1Life Management Solutions Ltd </a> and is licensed under the
+                        <a href="https://creativecommons.org/licenses/by/4.0/"><span property="dct:title">Creative Commons Attribution Licence (CC-BY v4.0)</span></a>
+                        for anyone to access, use and share;
+                    </span>
+                <span property="dct:rights" resource="#rights" typeof="odrs:RightsStatement">
+                        <span class="metadata" property="rdfs:label">Rights Statement</span>
+                        <a class="metadata" href="https://creativecommons.org/licenses/by/4.0/" property="odrs:dataLicense">Creative Commons Attribution Licence (CC-BY v4.0)</a>
+                        <a class="metadata" href="https://creativecommons.org/licenses/by/4.0/" property="odrs:contentLicense">Creative Commons Attribution Licence (CC-BY v4.0)</a>
+                        using attribution
+                        "<a href="https://booking.1life.co.uk/OpenActive/" property="odrs:attributionURL"><span property="odrs:attributionText">1Life</span></a>".
+                    </span>
+            </div>
+            <p></p>
+            <span class="avatar"><a href="https://www.openactive.io/"><img src="https://www.openactive.io/assets/openactive-logo-small.png" width="100" alt="OpenActive" /></a></span>
+        </footer>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <ul class="copyright">
+            <li>Platform: <a href="https://www.gladstonesoftware.co.uk">Gladstone OWS:2.0.1</a>. Design: <a href="http://html5up.net">HTML5 UP</a>.</li>
+        </ul>
+    </footer>
+
+</div>
+
+<!-- Scripts -->
+<!--[if lte IE 8]><script src="Scripts/respond.min.js"></script><![endif]-->
+
+<script>if ('addEventListener' in window) { window.addEventListener('load', function () { document.body.className = document.body.className.replace(/\bis-loading\b/, ''); }); document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : ''); }</script>
+</body>
+</html>
