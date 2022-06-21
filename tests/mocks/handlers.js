@@ -1,6 +1,59 @@
 import {rest} from 'msw'
 
 export const handlers = [
+    rest.get('https://openactive.io/data-catalogs/data-catalog-collection.jsonld',
+
+        (req, res, ctx) => {
+            return res(
+                ctx.status(200),
+                ctx.json(
+                    {
+                        "@context": "https://schema.org/",
+                        "@type": "DataCatalog",
+                        "@id": "https://openactive.io/data-catalogs/data-catalog-collection.jsonld",
+                        "name": "Collection of all data catalogs recognised as compliant by OpenActive",
+                        "hasPart": [
+                            "https://opendata.leisurecloud.live/api/datacatalog",
+                            "https://openactivedatacatalog.legendonlineservices.co.uk/api/DataCatalog",
+                        ],
+                        "datePublished": "2020-02-20T08:51:54+00:00",
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": "OpenActive",
+                            "url": "https://www.openactive.io/"
+                        },
+                        "license": "https://creativecommons.org/licenses/by/4.0/"
+                    }
+                ),
+            )
+        }),
+    rest.get('https://openactive.io/data-catalogs/data-catalog-with-delay.jsonld',
+
+        (req, res, ctx) => {
+            return res(
+                ctx.status(200),
+                ctx.json(
+                    {
+                        "@context": "https://schema.org/",
+                        "@type": "DataCatalog",
+                        "@id": "https://openactive.io/data-catalogs/data-catalog-collection.jsonld",
+                        "name": "Collection of all data catalogs recognised as compliant by OpenActive",
+                        "hasPart": [
+                            "https://opendata.leisurecloud.live/api/datacatalog",
+                            "https://slowcoach.com",
+                            "https://openactivedatacatalog.legendonlineservices.co.uk/api/DataCatalog"
+                        ],
+                        "datePublished": "2020-02-20T08:51:54+00:00",
+                        "publisher": {
+                            "@type": "Organization",
+                            "name": "OpenActive",
+                            "url": "https://www.openactive.io/"
+                        },
+                        "license": "https://creativecommons.org/licenses/by/4.0/"
+                    }
+                ),
+            )
+        }),
     rest.get('https://opendata.leisurecloud.live/api/datacatalog',
         (req, res, ctx) => {
             return res(

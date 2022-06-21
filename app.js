@@ -1,6 +1,7 @@
 import 'dotenv/config'
-const express = require('express')
-const axios = require('axios')
+import express from "express";
+import axios from 'axios'
+import {crawl} from './lib/CatalogueCrawler.js'
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -11,10 +12,11 @@ const axiosInstance = axios.create({
 
 app.get('/datasets', async (req, res) => {
     try {
-        const response = await axiosInstance.get("https://openactive.io/data-catalogs/data-catalog-collection.jsonld")
-        res.status(200).json(response.data.hasPart);
+        // const response = await axiosInstance.get("https://openactive.io/data-catalogs/data-catalog-collection.jsonld")
+        const response = await crawl("https://openactive.io/data-catalogs/data-catalog-collection.jsonld")
+        res.status(200).json(response);
     } catch (err) {
-        console.log(err.response.status);
+        console.log(err);
     }
 })
 

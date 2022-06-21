@@ -1,6 +1,5 @@
 import * as filesystem from 'fs';
 import {parse} from '../lib/DatasetSiteMetadataParser';
-import {test, expect} from "@jest/globals";
 
 test('Extracts dcat and other metadata fields from dataset site response', async () => {
     expect.assertions(1);
