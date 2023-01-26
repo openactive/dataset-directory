@@ -81,7 +81,7 @@ async function crawl(dataCatalogUrl) {
                     discussionurl: site.discussionUrl,
                     feedtype: x.name,
                     dataurl: x.contentUrl,
-                    publisherurl: site.publisher.name,
+                    publishername: site.publisher.name,
                     licenseurl: site.license,
                     publish: true
                 })
