@@ -74,29 +74,20 @@ async function crawl(dataCatalogUrl) {
             })))
 
             const datasets = datasetSites.flatMap(site => (
-                
-                (site?.distribution ?? []).map(x =>  ({
+
+                (site?.distribution ?? []).map(x => ({
                     title: site?.name ?? [],
-                    datasetsiteurl: x.url,
+                    datasetsiteurl: site.url,
                     discussionurl: site.discussionUrl,
                     feedtype: x.name,
                     dataurl: x.contentUrl,
                     publisherurl: site.publisher.name,
                     licenseurl: site.license,
                     publish: true
-            })
-            //    if (site.distribution) {
-             //       distribution.contentUrl.map(url => ({
-              //          ,
-               //         feedtype: site?.distribution?.name ?? [],
-                //        url: url
-                 //   }))
-               // }
-            )))
+                })
+                )))
 
-            console.log("Got all dataset sites: " + JSON.stringify(datasets, null, 2));
-
-
+           // console.log("Got all dataset sites: " + JSON.stringify(datasets, null, 2));
 
             return datasets
         }
