@@ -39,7 +39,6 @@ function extractJSONLDfromHTML(url, html) {
 
 }
 
-
 async function crawl(dataCatalogUrl) {
     console.log('1 Calling ' + dataCatalogUrl)
     try {
@@ -48,7 +47,7 @@ async function crawl(dataCatalogUrl) {
 
         if (collection.data && collection.data.hasPart) {
 
-            const datasetUrls = (await Promise.all(collection.data.hasPart.map(async (url) => {
+            const datasetUrls = (await Promise.all(collection.data.hasPart.map(async url => {
 
                 console.log('2 Calling ' + url)
                 try {
@@ -62,7 +61,7 @@ async function crawl(dataCatalogUrl) {
                 }
             }))).filter(x => x).flatMap(x => x.data.dataset);
 
-            const datasetSites = (await Promise.all(datasetUrls.map(async (url) => {
+            const datasetSites = (await Promise.all(datasetUrls.map(async url => {
                 console.log('3 Calling ' + url)
                 try {
                     return extractJSONLDfromHTML(url, (await axios.get(url, {
@@ -74,7 +73,32 @@ async function crawl(dataCatalogUrl) {
                 }
             })))
 
-            return datasetSites
+            const datasets = datasetSites.flatMap(site => (
+                
+                (site?.distribution ?? []).map(x =>  ({
+                    title: site?.name ?? [],
+                    datasetsiteurl: x.url,
+                    discussionurl: site.discussionUrl,
+                    feedtype: x.name,
+                    dataurl: x.contentUrl,
+                    publisherurl: site.publisher.name,
+                    licenseurl: site.license,
+                    publish: true
+            })
+            //    if (site.distribution) {
+             //       distribution.contentUrl.map(url => ({
+              //          ,
+               //         feedtype: site?.distribution?.name ?? [],
+                //        url: url
+                 //   }))
+               // }
+            )))
+
+            console.log("Got all dataset sites: " + JSON.stringify(datasets, null, 2));
+
+
+
+            return datasets
         }
     }
     catch (error) {
