@@ -13,6 +13,8 @@
     "axios": "^0.26.1",
     "dotenv": "^16.0.1",
     "express": "^4.17.3",
+    "htmlmetaparser": "^2.1.1",
+    "htmlparser2": "^6.0.1",
     "linkedom": "^0.14.9"
   },
   "devDependencies": {
